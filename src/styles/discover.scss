@@ -1,0 +1,106 @@
+@use './_mixin' as *;
+
+.discover {
+    position: relative;
+    min-width: 100vh;
+    height: 100vh;
+    margin: 0px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.discover__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover__texts {
+    z-index: 10;
+    max-width: 679px;
+    width: 100%;
+
+    h1 {
+        max-width: 630px;
+        text-align: center;
+        font-size: 58px;
+        color: var(--accent-white);
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: var(--accent-white);
+        margin-top: 28px;
+    }
+
+    button {
+        border: none;
+        background: none;
+        font-size: 16px;
+        color: var(--accent-white);
+        border: 1px solid var(--accent-white);
+        @include flex;
+        margin: 34px auto;
+        width: 188px;
+        height: 55px;
+        transition: 0.5s ease;
+
+        &:hover {
+            background-color: var(--accent-white);
+            color: var(--accent-black);
+            transition: 0.5s ease;
+        }
+    }
+}
+
+@media(max-width:992px) {
+    .discover__texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-size: 38px;
+            max-width: 500px;
+        }
+
+        p {
+            max-width: 500px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .discover {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .discover__texts {
+        max-width: 370px;
+
+        h1 {
+            font-size: 30px;
+            max-width: 370px;
+        }
+
+        p {
+            max-width: 370px;
+            font-size: 14px;
+        }
+
+        button {
+            font-size: 14px;
+        }
+    }
+}

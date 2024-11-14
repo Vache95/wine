@@ -1,0 +1,48 @@
+@use './_mixin' as *;
+
+.terroir {
+    min-height: 540px;
+    background-color: var(--accent-white);
+
+}
+
+.terroir__container {
+    display: flex;
+}
+
+.terroir__left {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    width: 50%;
+    box-shadow: var(--accent-gray-20);
+}
+
+.terroir__right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width:1024px) {
+    .terroir__container {
+        flex-direction: column;
+    }
+
+    .terroir__left {
+        width: 100%;
+        order: 2;
+        padding: 30px;
+    }
+
+    .terroir__right {
+        width: 100%;
+        order: 1;
+    }
+}

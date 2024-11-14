@@ -1,0 +1,49 @@
+@use './_mixin' as *;
+
+.club {
+    min-height: 540px;
+    background-color: var(--accent-white);
+}
+
+.club__container {
+    display: flex;
+}
+
+.club__left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.club__right {
+    width: 50%;
+    background-color: #EDEDED;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 30px;
+    box-shadow: #EDEDED 10px 10px 15px 10px, #EDEDED 0px 0px 25px 20px;
+
+}
+
+@media(max-width:1024px) {
+    .club__container {
+        flex-direction: column;
+    }
+
+    .club__left {
+        width: 100%;
+    }
+
+    .club__right {
+        width: 100%;
+        padding: 30px;
+    }
+}
